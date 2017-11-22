@@ -1,0 +1,33 @@
+<h3>Registration</h3>
+<form (submit)="register()" #formData="ngForm">
+
+
+    Name:
+    <input type="text"
+    name="name"
+    [(ngModel)]="user.name"
+    required
+    #name="ngModel"
+    minLength="2"><br>
+
+    Email:
+    <input type="text"
+    name="email"
+    [(ngModel)]="user.email"
+    #email="ngModel"
+    required> <br>
+
+    Password:
+    <input type="password"
+    name="password"
+    [(ngModel)]="user.password" 
+    #password="ngModel"
+    required><br>
+
+    Confirm Password:
+    <input type="text"
+    name="confirm_pw"
+    [(ngModel)]="user.confirm_pw"
+    #confirm_pw="ngModel"><br>
+    <input type="submit" value="Register">
+</form>
